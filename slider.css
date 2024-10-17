@@ -1,0 +1,154 @@
+.slider-container {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 10px 20px 10px 20px;
+    position: relative;
+    overflow: hidden;
+}
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.cardss {
+    flex: 0 0 300px;
+    height: 500px;
+    margin: 0 6px;
+    background: var( --gradient2);
+    border: 1px solid var(--border-color2);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.cardss img {
+    width: 300px;
+    height: 180px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    /* border: 1px solid var( --border-color2); */
+}
+.cardss h5 {
+    width: 300px;
+    height: 50px;
+    margin: 5px 0;
+    font-size: 24px;
+    color:  var(--text-color-h2);
+    font-family: 'Cairo', sans-serif;
+}
+
+.cardss p {
+    padding: 0 20px;
+    flex-grow: 1;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: var( --text-color);
+    font-family: 'Cairo', sans-serif;
+
+}
+
+
+
+
+
+.slider-button {
+background: transparent;
+color: var(   --button-bg-color-slider);
+border: none;
+font-size: 6rem;
+cursor: pointer;
+position: absolute;
+top: 45%;
+transform: translateY(-50%);
+transition: color 0.3s, text-shadow 0.3s;
+padding: 10px;
+z-index: 10; /* Ensure buttons are on top */
+transform: translateY(-0%); /* Adjust for true vertical centering */
+color: var(--primary-hover-color);
+text-shadow: 0 0 20px var(--shadow-color);
+background-color: transparent;
+animation: pulsate-glow 1.5s infinite;
+}
+@keyframes pulsate-glow {
+    0% {
+        text-shadow: 0 0 2px var(--shadow-color), 0 0 4px var(--shadow-color), 0 0 6px var(--shadow-color);
+    }
+    50% {
+        text-shadow: 0 0 4px var(--shadow-color), 0 0 8px var(--shadow-color), 0 0 12px var(--shadow-color);
+    }
+    100% {
+        text-shadow: 0 0 2px var(--shadow-color), 0 0 4px var(--shadow-color), 0 0 6px var(--shadow-color);
+    }
+}
+
+.slider-button:hover {
+color: var(--text-color-h2);
+text-shadow: 0 0 30px var(--shadow-color2) !important;
+background-color: transparent;
+}
+
+
+
+ 
+
+.slider-button.left {
+    left: 10px;
+}
+.slider-button.right {
+    right: 10px;
+}
+
+/* .empty-card {
+visibility: hiden;
+} */
+.emptyhalfcard {
+flex: 0 0 150px; /* Half the width of the standard card */
+visibility: hidden;
+}
+.cardssDEL
+{
+visibility: hidden;
+}
+a {
+text-decoration: none; /* Remove underline */
+color: inherit; /* Inherit color from parent element */
+background-color: transparent; /* Remove default blue background */
+
+}
+a:focus, a:hover {
+    outline: none; /* Remove focus outline */
+    background-color: transparent; /* Ensure background stays transparent on hover/focus */
+}
+
+
+
+@media (max-width: 500px) {
+    .slider-container {
+        padding: 10px 25px 10px 0px;
+
+    }
+    
+    .slider-button.left {
+        left: 2px;
+    }
+    .slider-button.right {
+        right: 2px;
+    }
+    .slider-button {
+        padding: 10px 3px 10px 3px;  
+    }
+}
+
+
+
+
+/* 
+html[lang="ar"] header {
+    direction: rtl;
+    text-align: right;
+} */
+
+
+
+

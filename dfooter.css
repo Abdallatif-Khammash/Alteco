@@ -1,0 +1,151 @@
+/* Dark and Elegant Footer Design */
+footer {
+    background: var( --footerbg);
+    border-top: 3px solid var(--border-color2);
+    color: #f5f6fa; /* Light text color */
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 20px;
+    padding: 0 40px;
+    max-width: 1200px; /* Limits footer width */
+    margin: 0 auto; /* Centers the footer */
+}
+
+.footer-info, .footer-services, .footer-partners {
+    flex: 1 1 33%; /* Allow equal growth and basis for three columns */
+    text-align: center; /* Center text for larger screens */
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center items horizontally */
+    /* justify-content: center; Center items vertically */
+}
+
+
+.footer-services h3, .footer-partners h3 {
+    /* color: #fcd00b; */
+    color:  var(--text-color-h2);
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #666;
+    padding-top: 20px;
+    font-size: 0.8rem;
+    color: #ccc;
+}
+
+.footer-services a, .footer-partners p {
+    color: var( --text-color);
+    /* color: #f5f6fa; */
+    text-decoration: none;
+}
+
+.footer-services a:hover {
+    color: #fcd00b;
+}
+
+.partner-logo {
+    max-width: 80px;
+    margin: 15px;
+    transition: transform 0.3s;
+}
+
+.partner-logo:hover {
+    transform: scale(1.1);
+}
+
+footer p, footer label {
+    color: var( --text-color);
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove any padding if necessary */
+    margin-bottom: 15px; /* Add space under each item (adjust as needed) */
+
+}
+
+.footer-partners img {
+    margin: 5px;
+    animation: neonGlow 1.5s ease-out infinite;
+}
+
+@keyframes neonGlow {
+    0%, 100% {
+        filter: drop-shadow(0 0 10px var(--primary-hover-color));
+    }
+    50% {
+        filter: drop-shadow(0 0 20px var(--primary-hover-color));
+    }
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stacks sections vertically on smaller screens */
+        align-items: center;
+    }
+
+    .footer-info, .footer-services, .footer-partners {
+        text-align: center;
+        width: 100%; /* Full width for small screens */
+    }
+}
+
+
+@media (max-width: 1200px) and (min-width: 769px) {
+    .footer-container {
+        flex-wrap: wrap; /* Allow wrapping for 2 rows */
+    }
+
+    .footer-info, .footer-services, .footer-partners {
+        flex: 1 1 calc(50% - 20px); /* Allow 2 items per row with space */
+        padding: 0 10% ;
+    }
+}
+
+
+
+
+
+
+/*
+
+footer {
+    background-color: #1e272e;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid var(--primary-hover-color);
+
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-info, .footer-services, .footer-partners {
+    width: 30%;
+}
+
+.footer-services a {
+    color: #ffffff;
+    text-shadow: #192a56;
+}
+
+.footer-partners img {
+    width: 60px;
+    margin: 5px;
+    animation: neonGlow 1.5s ease-out infinite;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+}
+*/
